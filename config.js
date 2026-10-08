@@ -5,7 +5,7 @@
   The access key is entered by each person once, inside the add-in (gear icon).
 */
 window.CW_CONFIG = {
-  ANALYSE_URL: "https://CHANGE-ME-N8N-HOST/webhook/cw-enquiry-analyse",
-  HUBSPOT_URL: "https://CHANGE-ME-N8N-HOST/webhook/cw-enquiry-hubspot",
+  ANALYSE_URL: "https://cromwilkes.app.n8n.cloud/webhook/cw-enquiry-analyse",
+  HUBSPOT_URL: "https://cromwilkes.app.n8n.cloud/webhook/cw-enquiry-hubspot",
   MAX_BODY_CHARS: 20000
 };
