@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   CW Enquiry Assistant - Outlook add-in manifest
-  Before uploading: replace every https://CHANGE-ME.github.io/cw-enquiry-addin with the real GitHub Pages address.
 -->
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -14,11 +13,11 @@
   <DefaultLocale>en-GB</DefaultLocale>
   <DisplayName DefaultValue="CW Enquiry Assistant"/>
   <Description DefaultValue="Extracts enquiry details, drafts a first reply and logs new enquiries to HubSpot."/>
-  <IconUrl DefaultValue="https://CHANGE-ME.github.io/cw-enquiry-addin/assets/icon-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://CHANGE-ME.github.io/cw-enquiry-addin/assets/icon-128.png"/>
+  <IconUrl DefaultValue="https://hylaspart.github.io/cw-enquiry-addin/assets/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://hylaspart.github.io/cw-enquiry-addin/assets/icon-128.png"/>
   <SupportUrl DefaultValue="https://www.cromwellwilkes.co.uk"/>
   <AppDomains>
-    <AppDomain>https://CHANGE-ME.github.io</AppDomain>
+    <AppDomain>https://hylaspart.github.io</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
@@ -31,7 +30,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://CHANGE-ME.github.io/cw-enquiry-addin/taskpane.html"/>
+        <SourceLocation DefaultValue="https://hylaspart.github.io/cw-enquiry-addin/taskpane.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -82,13 +81,13 @@
       </Hosts>
       <Resources>
         <bt:Images>
-          <bt:Image id="Icon.16x16" DefaultValue="https://CHANGE-ME.github.io/cw-enquiry-addin/assets/icon-16.png"/>
-          <bt:Image id="Icon.32x32" DefaultValue="https://CHANGE-ME.github.io/cw-enquiry-addin/assets/icon-32.png"/>
-          <bt:Image id="Icon.80x80" DefaultValue="https://CHANGE-ME.github.io/cw-enquiry-addin/assets/icon-80.png"/>
+          <bt:Image id="Icon.16x16" DefaultValue="https://hylaspart.github.io/cw-enquiry-addin/assets/icon-16.png"/>
+          <bt:Image id="Icon.32x32" DefaultValue="https://hylaspart.github.io/cw-enquiry-addin/assets/icon-32.png"/>
+          <bt:Image id="Icon.80x80" DefaultValue="https://hylaspart.github.io/cw-enquiry-addin/assets/icon-80.png"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="Commands.Url" DefaultValue="https://CHANGE-ME.github.io/cw-enquiry-addin/commands.html"/>
-          <bt:Url id="Taskpane.Url" DefaultValue="https://CHANGE-ME.github.io/cw-enquiry-addin/taskpane.html"/>
+          <bt:Url id="Commands.Url" DefaultValue="https://hylaspart.github.io/cw-enquiry-addin/commands.html"/>
+          <bt:Url id="Taskpane.Url" DefaultValue="https://hylaspart.github.io/cw-enquiry-addin/taskpane.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="GroupLabel" DefaultValue="Cromwell Wilkes"/>
