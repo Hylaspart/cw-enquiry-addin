@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CW Enquiry Assistant</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <script src="config.js"></script>
+  <link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <img src="assets/icon-32.png" alt="" width="24" height="24">
+      <span>Enquiry Assistant</span>
+    </div>
+    <button id="settingsBtn" class="icon-btn" title="Settings" aria-label="Settings">&#9881;</button>
+  </header>
+
+  <!-- Settings -->
+  <section id="settingsView" class="card hidden">
+    <h2>Settings</h2>
+    <label for="accessKey">Access key</label>
+    <input id="accessKey" type="password" autocomplete="off" placeholder="Paste the key you were given">
+    <p class="hint">Saved to your own mailbox. Ask the person who set up the add-in for the key.</p>
+    <div class="row">
+      <button id="saveSettingsBtn" class="btn primary">Save</button>
+      <button id="closeSettingsBtn" class="btn">Close</button>
+    </div>
+  </section>
+
+  <main id="mainView">
+    <section class="card">
+      <div class="email-meta">
+        <div class="label">Email</div>
+        <div id="emailSubject" class="subject">Loading...</div>
+        <div id="emailFrom" class="muted"></div>
+      </div>
+      <button id="analyseBtn" class="btn primary block" disabled>Analyse enquiry</button>
+      <div id="logged" class="notice ok hidden"></div>
+    </section>
+
+    <div id="status" class="status hidden" role="status"></div>
+
+    <!-- Results -->
+    <section id="results" class="hidden">
+      <div id="notEnquiry" class="notice warn hidden">This email may not be a new client enquiry. Check before logging it.</div>
+
+      <section class="card">
+        <h2>Enquiry details</h2>
+        <div class="grid">
+          <div><label for="f_first_name">First name</label><input id="f_first_name"></div>
+          <div><label for="f_last_name">Last name</label><input id="f_last_name"></div>
+        </div>
+        <label for="f_email">Email</label><input id="f_email" type="email">
+        <label for="f_phone">Phone</label><input id="f_phone">
+        <div class="grid">
+          <div><label for="f_nationality">Nationality</label><input id="f_nationality"></div>
+          <div><label for="f_current_location">Location</label><input id="f_current_location"></div>
+        </div>
+        <label for="f_matter_type">Matter type</label><input id="f_matter_type">
+        <div class="grid">
+          <div><label for="f_urgency">Urgency</label>
+            <select id="f_urgency"><option>High</option><option selected>Normal</option><option>Low</option></select>
+          </div>
+          <div><label for="f_language">Language</label><input id="f_language"></div>
+        </div>
+        <label for="f_key_dates">Key dates / deadlines</label><input id="f_key_dates">
+        <label for="f_summary">Summary</label><textarea id="f_summary" rows="4"></textarea>
+        <div id="missingWrap" class="hidden">
+          <div class="label">Information still needed</div>
+          <ul id="missingList"></ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Draft reply</h2>
+        <label for="r_subject">Subject</label><input id="r_subject">
+        <div id="replyPreview" class="preview" contenteditable="true" aria-label="Reply draft, editable"></div>
+        <p class="hint">You can edit the text above. Nothing is sent until you press Send in Outlook.</p>
+        <button id="replyBtn" class="btn primary block">Open as reply</button>
+        <button id="newMsgBtn" class="btn block hidden">Open as new email to enquirer</button>
+        <button id="copyBtn" class="btn block">Copy text</button>
+        <button id="regenBtn" class="btn ghost block">Regenerate</button>
+      </section>
+
+      <section class="card">
+        <h2>HubSpot</h2>
+        <label for="h_deal_name">Deal name</label><input id="h_deal_name">
+        <p class="hint">Creates or updates the contact by email, creates a deal and attaches the summary as a note.</p>
+        <button id="hubspotBtn" class="btn primary block">Log to HubSpot</button>
+        <div id="hubspotResult" class="notice ok hidden"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="taskpane.js"></script>
+</body>
+</html>
